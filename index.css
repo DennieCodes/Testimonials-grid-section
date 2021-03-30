@@ -1,0 +1,192 @@
+/* Global Styling */
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  background-color: hsl(210, 46%, 95%);
+  margin: 0;
+}
+
+/* Layout Styling */
+.container {
+  margin: 10%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2em;
+}
+
+.card header {
+  display: flex;
+  margin-bottom: 1.25em;
+  align-items: center;
+}
+
+.card {
+  grid-column: auto / span 3;
+  border-radius: 10px;
+  padding: 1.5em 2em;
+}
+
+.card__wide {
+  grid-column: auto / span 6;
+  position: relative;
+}
+
+.card__tall {
+  grid-column: 10 / -1;
+  grid-row: 1 / span 2;
+}
+
+.card--img {
+  width: 2em;
+  height: 2em;
+  margin-right: 1em;
+  object-fit: scale-down;
+  border: 3px solid hsl(0, 0%, 81%, 0.4);
+  border-radius: 30px;
+}
+
+.card--img--quote {
+  height: 37%;
+  position: absolute;
+  object-fit: contain;
+  right: 15%;
+  top: 0;
+}
+
+.card__wide quote {
+  position: relative;
+  z-index: 1;
+}
+
+/* Color Styling */
+
+.card__violet {
+  background-color: hsl(263, 55%, 52%);
+}
+
+.card__gray-blue {
+  background-color: hsl(217, 19%, 35%);
+}
+
+.card__black-blue {
+  background-color: hsl(219, 29%, 14%);
+}
+
+.card__white {
+  background-color: hsl(0, 0%, 100%);
+}
+
+quote {
+  color: hsl(0, 0%, 100%);
+}
+
+.card__white quote,
+.card__white h2 {
+  color: hsl(217, 19%, 35%);
+}
+
+.card p {
+  color: hsl(0, 0%, 81%);
+}
+
+.card__white p,
+.card__white h3 {
+  color: hsl(217, 19%, 35%);
+}
+
+/* Typography Styling */
+h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 81%);
+  display: block;
+  margin: 0;
+}
+
+h3 {
+  font-size: 0.75rem;
+  color: hsl(0, 0%, 81%, 0.75);
+  opacity: 50%;
+  margin: 0;
+}
+
+quote {
+  font-size: 1.25rem;
+}
+
+.card p {
+  opacity: 50%;
+  font-size: 13px;
+  line-height: 1.5em;
+}
+
+/* media query styling */
+
+@media all and (max-width: 1300px) {
+  .container {
+    margin: 8%;
+    /* border: 2px solid black; */
+  }
+
+  .card {
+    grid-column: auto / span 6;
+  }
+
+  .card__tall {
+    grid-column: auto / span 6;
+    grid-row: auto / span 2;
+  }
+}
+
+@media all and (max-width: 1150px) {
+  .container {
+    margin: 6%;
+  }
+
+  .card--img--quote {
+    height: 30%;
+    right: 15%;
+  }
+}
+
+@media all and (max-width: 960px) {
+  .card--img--quote {
+    height: 25%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    margin: 5%;
+  }
+
+  .card {
+    grid-column: auto / span 12;
+  }
+
+  .card--img--quote {
+    height: 30%;
+    right: 5%;
+  }
+}
+
+@media all and (max-width: 320px) {
+  .container {
+    margin: 0;
+    grid-gap: 0;
+  }
+
+  .card {
+    padding: 1em;
+    margin-bottom: 2em;
+  }
+}
+
+/* Attribution Styling */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
